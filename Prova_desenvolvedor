@@ -1,0 +1,43 @@
+Você é o desenvolvedor responsável por um sistema de controle de autorizações de procedimentos médicos para um plano de saúde.
+Os critérios para permitir a execução de um procedimento são idade e sexo, de acordo com a tabela a seguir:
+
+PROCEDIMENTO	IDADE	SEXO	PERMITIDO
+1234		10	M	SIM
+4567		20	M	SIM
+6789		10	F	SIM
+6789		10	M	SIM
+1234		20	M	SIM
+4567		30	F	SIM
+
+Procedimentos não listados na tabela devem ser negados
+
+Objetivo: 
+- Através de um serviço REST, crie oe endpoints para registro das regras de autorização e das solicitações de autorização 
+
+Exemplos:
+
+Entrada:
+	/autorizador/cadastro/procedimento/1234/idade/10/sexo/M/autoriza/SIM
+	/autorizador/cadastro/procedimento/1234/idade/10/sexo/F/autoriza/NAO
+Saída:
+	HTTP 200
+
+Entrada:
+	/autorizador/procedimento/1234/idade/10/sexo/M
+Saída:
+	SIM
+
+
+Requisitos obrigatórios:
+- Utilizar serviços REST para o cadastro e validação dos procedimentos de autorização
+- Entregar a documentação necessária para compilar (colocar no readme do repositório)
+- Criar a estrutura de banco de dados proposta para o problema
+- Usar git para armazenar o fonte (usar um git publico e enviar a URL)
+- Usar o Maven para fazer o build
+- Contruir testes unitários
+- Criar scritps de versionamento via liquibase
+- Utilizar docker na solução
+
+
+
+
